@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #001f3f, #001133);
+    overflow: hidden;
+}
+
+.rocket-container {
+    position: relative;
+    width: 100px;
+    height: 500px;
+    animation: moveUp 5s linear infinite;
+}
+
+.rocket {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 120px;
+    background: linear-gradient(to bottom, #ddd, #aaa);
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rocket::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 40px solid #ddd;
+    transform: translateX(-50%);
+}
+
+.fin {
+    position: absolute;
+    bottom: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent #aaa transparent;
+}
+
+.left {
+    left: -15px;
+    transform: rotate(-30deg);
+}
+
+.right {
+    right: -15px;
+    transform: rotate(30deg);
+}
+
+.flames {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    display: flex;
+    gap: 5px;
+    transform: translateX(-50%);
+}
+
+.flame {
+    width: 10px;
+    height: 40px;
+    background: linear-gradient(to top, #ff8c00, #ff4500);
+    border-radius: 50%;
+    animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-600px);
+    }
+}
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(0.8);
+        opacity: 0.8;
+    }
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="transparent"/><circle cx="10%" cy="20%" r="1" fill="white" /><circle cx="25%" cy="30%" r="1.5" fill="white" /><circle cx="40%" cy="10%" r="1.2" fill="white" /><circle cx="60%" cy="40%" r="1.7" fill="white" /><circle cx="80%" cy="25%" r="1.3" fill="white" /><circle cx="70%" cy="60%" r="1.4" fill="white" /><circle cx="90%" cy="50%" r="1.8" fill="white" /></svg>') repeat;
+    animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
