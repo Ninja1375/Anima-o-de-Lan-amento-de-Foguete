@@ -6,7 +6,10 @@ Este projeto consiste em uma Animação de Lançamento de Foguete.
 
 Com o céu estrelado, o Foguete sai da base e sobe, esse movimento fica se repetindo em loop infinito.
 
-Este projeto usa apenas as linguagens HTML e CSS.
+## linguagens Utilizadas ##
+
+<a href="https://programartudo.blogspot.com/2024/05/html-o-que-e-e-qual-sua-funcionalidade.html?m=1" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40"/></a> <a href="https://programartudo.blogspot.com/2024/05/css-significado-e-funcionalidade.html?m=1" target="_blank"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40"/></a>
+
 
 **Demonstração:**
 
